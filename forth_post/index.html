@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>4.大作业完成步骤 - PanZXiang&#39;s Hugo Web</title><meta name="Description" content="Welcome to PanZXiang&#39;s Hugo Web"><meta property="og:title" content="4.大作业完成步骤" />
+<meta property="og:description" content="Git、Socket、Hugo学习及应用 本次大作业中首先在Ubuntu系统中完成Socket通信,在使用Hugo时遇到权限不足的bug后改为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/forth_post/" /><meta property="og:image" content="http://example.org/logo.png"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-12-09T23:25:35-05:00" />
+<meta property="article:modified_time" content="2022-12-09T23:25:35-05:00" /><meta property="og:site_name" content="我的网站" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://example.org/logo.png"/>
+
+<meta name="twitter:title" content="4.大作业完成步骤"/>
+<meta name="twitter:description" content="Git、Socket、Hugo学习及应用 本次大作业中首先在Ubuntu系统中完成Socket通信,在使用Hugo时遇到权限不足的bug后改为"/>
+<meta name="application-name" content="我的网站">
+<meta name="apple-mobile-web-app-title" content="我的网站"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/forth_post/" /><link rel="prev" href="http://example.org/zzz_post/" /><link rel="next" href="http://example.org/third_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "4.大作业完成步骤",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/forth_post\/"
+        },"genre": "posts","wordcount":  680 ,
+        "url": "http:\/\/example.org\/forth_post\/","datePublished": "2022-12-09T23:25:35-05:00","dateModified": "2022-12-09T23:25:35-05:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "PanZXiang"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="PanZXiang&#39;s Hugo Web"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="PanZXiang&#39;s Hugo Web"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">4.大作业完成步骤</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>PanZXiang</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-12-09">2022-12-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;680 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="true">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#1git应用">1.Git应用</a>
+      <ul>
+        <li><a href="#运行git-init初始化仓库并且会出现-git文件">运行<code>git init</code>初始化仓库并且会出现 .git文件</a></li>
+        <li><a href="#编写好代码后使用git-add与git-commit命令提交文件">编写好代码后使用<code>git add</code>与<code>git commit</code>命令提交文件</a></li>
+        <li><a href="#使用git-log查看提交记录">使用<code>git log</code>查看提交记录</a></li>
+        <li><a href="#使用git-push-origin-master提交到远程仓库">使用<code>git push origin master</code>提交到远程仓库</a></li>
+        <li><a href="#学习网站">学习网站</a></li>
+      </ul>
+    </li>
+    <li><a href="#2socket通信">2.Socket通信</a>
+      <ul>
+        <li><a href="#最先使用python语言编写由于ubuntu中python版本过低改为c编写">最先使用python语言编写，由于Ubuntu中python版本过低，改为c++编写</a></li>
+        <li><a href="#通过学习了解到socket客户端中主要使用函数bind对ip与端口绑定并使用函数listen开始监听请求存在请求使用accpet函数进行连接成功则返回客户端的socket通过函数read读取客户端发来的信息函数write向客户端输送信息">通过学习了解到Socket客户端中主要使用函数bind()对IP与端口绑定并使用函数listen()开始监听请求，存在请求使用accpet()函数进行连接，成功则返回客户端的Socket，通过函数read()读取客户端发来的信息，函数write()向客户端输送信息。</a></li>
+        <li><a href="#学习网站-1">学习网站</a></li>
+      </ul>
+    </li>
+    <li><a href="#3hugo个人博客搭建">3.Hugo个人博客搭建</a>
+      <ul>
+        <li><a href="#使用hugo-new-site-名字搭建本地站点">使用<code>hugo new site 名字</code>搭建本地站点</a></li>
+        <li><a href="#前往-httpsthemesgohugoio选择主题">前往 <a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>选择主题</a></li>
+        <li><a href="#对站点内config文件配置对应主题和其他参数">对站点内config文件配置对应主题和其他参数</a></li>
+        <li><a href="#使用hugo-new-postsfirst_postmd获取一个文章">使用<code>hugo new posts/first_post.md</code>获取一个文章</a></li>
+        <li><a href="#使用hugo-server启动本地网站">使用<code>hugo server</code>启动本地网站</a></li>
+        <li><a href="#使用markdown语法对文章进行编辑">使用markdown语法对文章进行编辑</a></li>
+        <li><a href="#学习网站-2">学习网站</a></li>
+      </ul>
+    </li>
+    <li><a href="#4将hugo网页通过apache部署到服务器">4.将Hugo网页通过Apache部署到服务器</a>
+      <ul>
+        <li><a href="#在站点中使用hugo在public生成配置文件">在站点中使用<code>hugo</code>在public生成配置文件</a></li>
+        <li><a href="#将public中的文件复制到varwwwhtml中">将public中的文件复制到/var/www/html中</a></li>
+        <li><a href="#使用etcinitdapache2-start开启apache服务">使用<code>/etc/init.d/apache2 start</code>开启Apache服务</a></li>
+        <li><a href="#网页中输入ip地址即可访问">网页中输入IP地址即可访问</a></li>
+        <li><a href="#学习网站-3">学习网站</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="gitsockethugo学习及应用">Git、Socket、Hugo学习及应用</h1>
+<p>本次大作业中首先在Ubuntu系统中完成Socket通信,在使用Hugo时遇到权限不足的bug后改为使用Kali系统完成,并且在两个系统中都配置了Git远程连接仓库</p>
+<h2 id="1git应用">1.Git应用</h2>
+<h3 id="运行git-init初始化仓库并且会出现-git文件">运行<code>git init</code>初始化仓库并且会出现 .git文件</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/git1.png"
+        data-srcset="/git1.png, /git1.png 1.5x, /git1.png 2x"
+        data-sizes="auto"
+        alt="/git1.png"
+        title="/git1.png" /></p>
+<h3 id="编写好代码后使用git-add与git-commit命令提交文件">编写好代码后使用<code>git add</code>与<code>git commit</code>命令提交文件</h3>
+<h3 id="使用git-log查看提交记录">使用<code>git log</code>查看提交记录</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/git2.png"
+        data-srcset="/git2.png, /git2.png 1.5x, /git2.png 2x"
+        data-sizes="auto"
+        alt="/git2.png"
+        title="/git2.png" /></p>
+<h3 id="使用git-push-origin-master提交到远程仓库">使用<code>git push origin master</code>提交到远程仓库</h3>
+<h3 id="学习网站">学习网站</h3>
+<ul>
+<li><a href="https://gitee.com/help/categories/36" target="_blank" rel="noopener noreffer ">https://gitee.com/help/categories/36</a></li>
+<li><a href="https://blog.csdn.net/qq_43794633/article/details/120625061" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/qq_43794633/article/details/120625061</a></li>
+</ul>
+<hr>
+<h2 id="2socket通信">2.Socket通信</h2>
+<h3 id="最先使用python语言编写由于ubuntu中python版本过低改为c编写">最先使用python语言编写，由于Ubuntu中python版本过低，改为c++编写</h3>
+<h3 id="通过学习了解到socket客户端中主要使用函数bind对ip与端口绑定并使用函数listen开始监听请求存在请求使用accpet函数进行连接成功则返回客户端的socket通过函数read读取客户端发来的信息函数write向客户端输送信息">通过学习了解到Socket客户端中主要使用函数bind()对IP与端口绑定并使用函数listen()开始监听请求，存在请求使用accpet()函数进行连接，成功则返回客户端的Socket，通过函数read()读取客户端发来的信息，函数write()向客户端输送信息。</h3>
+<h3 id="学习网站-1">学习网站</h3>
+<ul>
+<li><a href="https://www.bilibili.com/video/BV1a7411z75u?p=1&amp;vd_source=f119c843c853cb3b12ba5f4844e23e89" target="_blank" rel="noopener noreffer ">https://www.bilibili.com/video/BV1a7411z75u?p=1&vd_source=f119c843c853cb3b12ba5f4844e23e89</a></li>
+<li><a href="https://www.bilibili.com/video/BV1DV4y1j7SC/?spm_id_from=333.337.search-card.all.click&amp;vd_source=f119c843c853cb3b12ba5f4844e23e89" target="_blank" rel="noopener noreffer ">https://www.bilibili.com/video/BV1DV4y1j7SC/?spm_id_from=333.337.search-card.all.click&vd_source=f119c843c853cb3b12ba5f4844e23e89</a></li>
+</ul>
+<hr>
+<h2 id="3hugo个人博客搭建">3.Hugo个人博客搭建</h2>
+<h3 id="使用hugo-new-site-名字搭建本地站点">使用<code>hugo new site 名字</code>搭建本地站点</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/hugo1.png"
+        data-srcset="/hugo1.png, /hugo1.png 1.5x, /hugo1.png 2x"
+        data-sizes="auto"
+        alt="/hugo1.png"
+        title="/hugo1.png" /></p>
+<h3 id="前往-httpsthemesgohugoio选择主题">前往 <a href="https://themes.gohugo.io/" target="_blank" rel="noopener noreffer ">https://themes.gohugo.io/</a>选择主题</h3>
+<h3 id="对站点内config文件配置对应主题和其他参数">对站点内config文件配置对应主题和其他参数</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/hugo2.png"
+        data-srcset="/hugo2.png, /hugo2.png 1.5x, /hugo2.png 2x"
+        data-sizes="auto"
+        alt="/hugo2.png"
+        title="/hugo2.png" /></p>
+<h3 id="使用hugo-new-postsfirst_postmd获取一个文章">使用<code>hugo new posts/first_post.md</code>获取一个文章</h3>
+<h3 id="使用hugo-server启动本地网站">使用<code>hugo server</code>启动本地网站</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/hugo3.png"
+        data-srcset="/hugo3.png, /hugo3.png 1.5x, /hugo3.png 2x"
+        data-sizes="auto"
+        alt="/hugo3.png"
+        title="/hugo3.png" /></p>
+<h3 id="使用markdown语法对文章进行编辑">使用markdown语法对文章进行编辑</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/hugo4.png"
+        data-srcset="/hugo4.png, /hugo4.png 1.5x, /hugo4.png 2x"
+        data-sizes="auto"
+        alt="/hugo4.png"
+        title="/hugo4.png" /></p>
+<h3 id="学习网站-2">学习网站</h3>
+<ul>
+<li><a href="https://hugoloveit.com/zh-cn/theme-documentation-basics/" target="_blank" rel="noopener noreffer ">https://hugoloveit.com/zh-cn/theme-documentation-basics/</a></li>
+<li><a href="https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&amp;vd_source=f119c843c853cb3b12ba5f4844e23e89" target="_blank" rel="noopener noreffer ">https://www.bilibili.com/video/BV1JA411h7Gw/?spm_id_from=333.337.search-card.all.click&vd_source=f119c843c853cb3b12ba5f4844e23e89</a></li>
+</ul>
+<h2 id="4将hugo网页通过apache部署到服务器">4.将Hugo网页通过Apache部署到服务器</h2>
+<h3 id="在站点中使用hugo在public生成配置文件">在站点中使用<code>hugo</code>在public生成配置文件</h3>
+<h3 id="将public中的文件复制到varwwwhtml中">将public中的文件复制到/var/www/html中</h3>
+<h3 id="使用etcinitdapache2-start开启apache服务">使用<code>/etc/init.d/apache2 start</code>开启Apache服务</h3>
+<h3 id="网页中输入ip地址即可访问">网页中输入IP地址即可访问</h3>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/resultHugo.png"
+        data-srcset="/resultHugo.png, /resultHugo.png 1.5x, /resultHugo.png 2x"
+        data-sizes="auto"
+        alt="/resultHugo.png"
+        title="/resultHugo.png" /></p>
+<h3 id="学习网站-3">学习网站</h3>
+<ul>
+<li><a href="https://blog.csdn.net/Fighting_hawk/article/details/122640537" target="_blank" rel="noopener noreffer ">https://blog.csdn.net/Fighting_hawk/article/details/122640537</a></li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2022-12-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/forth_post/index.md" target="_blank">Read Markdown</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://example.org/forth_post/" data-title="4.大作业完成步骤" data-via="xxxx"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://example.org/forth_post/"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://example.org/forth_post/" data-title="4.大作业完成步骤"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://example.org/forth_post/" data-title="4.大作业完成步骤"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://example.org/forth_post/" data-title="4.大作业完成步骤"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zzz_post/" class="prev" rel="prev" title="zzz post"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>zzz post</a>
+            <a href="/third_post/" class="next" rel="next" title="3.Linux笔记">3.Linux笔记<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.105.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2019 - 2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">PanZXiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"cookieconsent":{"content":{"dismiss":"Got it!","link":"Learn more","message":"This website uses Cookies to improve your experience."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

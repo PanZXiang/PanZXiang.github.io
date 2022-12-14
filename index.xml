@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>PanZXiang&#39;s Hugo Web</title>
+        <link>http://example.org/</link>
+        <description>Welcome to PanZXiang&#39;s Hugo Web</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>614965778@qq.com (PanZXiang)</managingEditor>
+            <webMaster>614965778@qq.com (PanZXiang)</webMaster><lastBuildDate>Fri, 09 Dec 2022 23:25:35 -0500</lastBuildDate>
+            <atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>1.Socket通信</title>
+    <link>http://example.org/first_post/</link>
+    <pubDate>Fri, 09 Dec 2022 23:25:35 -0500</pubDate>
+    <author>PanZXiang</author>
+    <guid>http://example.org/first_post/</guid>
+    <description><![CDATA[1.Socket通信 Socket技术： 服务端 创建两个文件描述符，一个用于创建监听套接字，一个用于服务端与客户端之间连接成功后传输数据的套接字]]></description>
+</item>
+<item>
+    <title>2.Git记录代码并上传仓库</title>
+    <link>http://example.org/second_post/</link>
+    <pubDate>Fri, 09 Dec 2022 23:25:35 -0500</pubDate>
+    <author>PanZXiang</author>
+    <guid>http://example.org/second_post/</guid>
+    <description><![CDATA[1.本地安装并远程连接gitee仓库 sudo apt-get install git git init //选择文件夹初始化为本地仓库 git config &ndash;global user.email &ldquo;xx@xx.com&rdquo; git config &ndash;global user.name &ldquo;xxx&rdquo; //配置用户邮箱和名字 ssh-keygen -t rsa -C &ldquo;xx@xx.com&rdquo; //获取s]]></description>
+</item>
+<item>
+    <title>3.Linux笔记</title>
+    <link>http://example.org/third_post/</link>
+    <pubDate>Fri, 09 Dec 2022 23:25:35 -0500</pubDate>
+    <author>PanZXiang</author>
+    <guid>http://example.org/third_post/</guid>
+    <description><![CDATA[pwd 显示当前工作目录绝对路径 cd 改变工作目录路径 . 代表当前所在目录 .. 代表当前目录的上一层目录 ~ 代表家目录 / 代表根目录 mkdir 创建目录 -p 若路径中目录不存]]></description>
+</item>
+<item>
+    <title>4.大作业完成步骤</title>
+    <link>http://example.org/forth_post/</link>
+    <pubDate>Fri, 09 Dec 2022 23:25:35 -0500</pubDate>
+    <author>PanZXiang</author>
+    <guid>http://example.org/forth_post/</guid>
+    <description><![CDATA[Git、Socket、Hugo学习及应用 本次大作业中首先在Ubuntu系统中完成Socket通信,在使用Hugo时遇到权限不足的bug后改为]]></description>
+</item>
+<item>
+    <title>zzz post</title>
+    <link>http://example.org/zzz_post/</link>
+    <pubDate>Fri, 09 Dec 2022 23:25:35 -0500</pubDate>
+    <author>PanZXiang</author>
+    <guid>http://example.org/zzz_post/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>
